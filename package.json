@@ -1,0 +1,29 @@
+{
+  "name": "show-run-scripts",
+  "version": "1.0.0",
+  "description": "show scripts and execute scripts through commands",
+  "keywords": [
+    "show scripts",
+    "execute scripts",
+    "show package.json scripts",
+    "execute package.json scripts"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "type": "module",
+  "bin": {
+    "srs": "./index.js",
+    "srsc": "./index.js"
+  },
+  "scripts": {
+    "test": "echo test",
+    "test2": "echo test2"
+  },
+  "author": "1042289178@qq.com",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "inquirer": "^9.2.7"
+  }
+}
