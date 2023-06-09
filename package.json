@@ -8,6 +8,10 @@
     "show package.json scripts",
     "execute package.json scripts"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zengpeng123/show-run-scripts.git"
+  },
   "files": [
     "index.js"
   ],
@@ -18,7 +22,8 @@
   },
   "scripts": {
     "test": "echo test",
-    "test2": "echo test2"
+    "test2": "echo test2",
+    "start:dev": "echo start:dev"
   },
   "author": "1042289178@qq.com",
   "license": "MIT",

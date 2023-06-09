@@ -49,10 +49,10 @@ import chalk from 'chalk';
     };
 
     const { targetScript, targetPkgTool = pkgManageTool } = await inquirer.prompt(prompts);
-    console.log(chalk.blueBright(`running: ${targetPkgTool} run ${targetScript.split(':')[0]}`));
-    spawn(targetPkgTool, ['run', targetScript.split(':')[0]], {
-      stdio: 'inherit',
-    })
+    const selectScriptIndex = Object.keys(scripts).findIndex(v => `${v}: ${scripts[v]}` === targetScript);
+    const selectScript = Object.keys(scripts)[selectScriptIndex]
+    console.log(chalk.blueBright(`running: ${targetPkgTool} run ${selectScript}`));
+    spawn(targetPkgTool, ['run', selectScript], { stdio: 'inherit', });
   } catch (error) {
     console.log(error);
   }
